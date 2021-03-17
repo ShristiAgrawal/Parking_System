@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
         });
     }
     private void login() {
-        Intent intent=new Intent(MainActivity.this,options.class);
+        Intent intent=new Intent(MainActivity.this,MapsActivity.class);
                    startActivity(intent);
 
 
