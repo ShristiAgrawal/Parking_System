@@ -2,6 +2,7 @@ package com.shristi.smart_parking;
 
 import androidx.fragment.app.FragmentActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
@@ -10,6 +11,7 @@ import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 
 public class MapsActivity extends FragmentActivity implements OnMapReadyCallback {
@@ -59,5 +61,13 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                         .defaultMarker(BitmapDescriptorFactory.HUE_GREEN)).title("Member4 here"));
 
         mMap.moveCamera(CameraUpdateFactory.newLatLng(mylocation));
+        mMap.setOnMarkerClickListener(new GoogleMap.OnMarkerClickListener() {
+            @Override
+            public boolean onMarkerClick(Marker marker) {
+                Intent i=new Intent(MapsActivity.this,ParkingSlots.class);
+                startActivity(i);
+                return false;
+            }
+        });
     }
 }
