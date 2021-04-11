@@ -27,6 +27,30 @@
             android:layout_marginTop="15dp"
             android:paddingLeft="10dp"
             />
+        <EditText
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:hint="Mobile number"
+            android:id="@+id/mobile_number"
+            android:layout_marginTop="15dp"
+            android:paddingLeft="10dp"
+            />
+        <EditText
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:hint="Booking time"
+            android:id="@+id/booking_time"
+            android:layout_marginTop="15dp"
+            android:paddingLeft="10dp"
+            />
+        <EditText
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:hint="Booking duration"
+            android:id="@+id/duration"
+            android:layout_marginTop="15dp"
+            android:paddingLeft="10dp"
+            />
 
         <Button
             android:layout_width="250dp"
