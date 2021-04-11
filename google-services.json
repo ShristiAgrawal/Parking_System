@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "1055353888277",
+    "project_id": "smart-parking-e9941",
+    "storage_bucket": "smart-parking-e9941.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1055353888277:android:408c0d0d67df279ce2f81c",
+        "android_client_info": {
+          "package_name": "com.shristi.smart_parking"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1055353888277-48vgqjbu01g283b97254q8uanbqae7nl.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.shristi.smart_parking",
+            "certificate_hash": "a9e7cd7a1372b884b0820452c61a8b3a07eaf6c6"
+          }
+        },
+        {
+          "client_id": "1055353888277-8uv8rjebh1o8bihurdo2r8a94sm98kmi.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBMUUL_LtIoQbrSxFM3TA07vukwdSlrKyQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1055353888277-8uv8rjebh1o8bihurdo2r8a94sm98kmi.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
