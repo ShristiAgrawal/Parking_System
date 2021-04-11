@@ -38,6 +38,7 @@
         <activity
             android:name=".ParkingSlots"
             android:label="Parking"></activity>
+        <activity android:name=".BookingAct"></activity>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
