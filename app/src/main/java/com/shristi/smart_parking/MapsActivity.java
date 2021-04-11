@@ -2,6 +2,7 @@ package com.shristi.smart_parking;
 
 import androidx.fragment.app.FragmentActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
@@ -10,6 +11,7 @@ import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 
 public class MapsActivity extends FragmentActivity implements OnMapReadyCallback {
@@ -39,12 +41,12 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         mMap = googleMap;
 
         // Add a marker in Sydney and move the camera
-        LatLng mylocation = new LatLng(-34, 151);
-        mMap.addMarker(new MarkerOptions().position(mylocation).title("I am here"));
-        LatLng member1 = new LatLng(-33, 151);
-        LatLng member2 = new LatLng(-33.5, 151);
-        LatLng member3 = new LatLng(-33.25, 151);
-        LatLng member4 = new LatLng(-33, 151.5);
+//        LatLng mylocation = new LatLng(-34, 151);
+//        mMap.addMarker(new MarkerOptions().position(mylocation).title("I am here"));
+        LatLng member1 = new LatLng(21.8545243, 84.0122088);
+        LatLng member2 = new LatLng(21.8512377, 84.0122490);
+        LatLng member3 = new LatLng(21.854, 84.01);
+        LatLng member4 = new LatLng(21.85, 84.012);
         mMap.addMarker(new MarkerOptions().position(member1)
                 .icon(BitmapDescriptorFactory
                         .defaultMarker(BitmapDescriptorFactory.HUE_AZURE)).title("Member1 here"));
@@ -58,6 +60,17 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 .icon(BitmapDescriptorFactory
                         .defaultMarker(BitmapDescriptorFactory.HUE_GREEN)).title("Member4 here"));
 
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(mylocation));
+        mMap.moveCamera(CameraUpdateFactory.newLatLng(member1));
+        mMap.animateCamera(CameraUpdateFactory.zoomTo(16),2000,null);
+        mMap.setOnMarkerClickListener(new GoogleMap.OnMarkerClickListener() {
+
+            @Override
+            public boolean onMarkerClick(Marker marker) {
+                Intent i=new Intent(MapsActivity.this,ParkingSlots.class);
+                startActivity(i);
+                return false;
+            }
+        });
+
     }
 }
