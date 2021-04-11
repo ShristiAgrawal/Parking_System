@@ -38,27 +38,26 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
 
-
-        LatLng mylocation = new LatLng(21.8514048, 84.0110920);
-//        mMap.addMarker(new MarkerOptions().position(mylocation).title("I am here"));
-        LatLng member1 = new LatLng(21.8505973, 84.0079394);
-        LatLng member2 = new LatLng(21.8498927, 84.0079021);
-        LatLng member3 = new LatLng(21.8525139, 84.0079870);
-        LatLng member4 = new LatLng(21.8514994,84.0135445 );
+        // Add a marker in Sydney and move the camera
+        LatLng mylocation = new LatLng(-34, 151);
+        mMap.addMarker(new MarkerOptions().position(mylocation).title("I am here"));
+        LatLng member1 = new LatLng(-33, 151);
+        LatLng member2 = new LatLng(-33.5, 151);
+        LatLng member3 = new LatLng(-33.25, 151);
+        LatLng member4 = new LatLng(-33, 151.5);
         mMap.addMarker(new MarkerOptions().position(member1)
                 .icon(BitmapDescriptorFactory
-                        .defaultMarker(BitmapDescriptorFactory.HUE_RED)).title("Park1 here"));
+                        .defaultMarker(BitmapDescriptorFactory.HUE_AZURE)).title("Member1 here"));
         mMap.addMarker(new MarkerOptions().position(member2)
                 .icon(BitmapDescriptorFactory
-                        .defaultMarker(BitmapDescriptorFactory.HUE_BLUE)).title("Park2 here"));
+                        .defaultMarker(BitmapDescriptorFactory.HUE_BLUE)).title("Member2 here"));
         mMap.addMarker(new MarkerOptions().position(member3)
                 .icon(BitmapDescriptorFactory
-                        .defaultMarker(BitmapDescriptorFactory.HUE_ORANGE)).title("Park3 here"));
+                        .defaultMarker(BitmapDescriptorFactory.HUE_ORANGE)).title("Member3 here"));
         mMap.addMarker(new MarkerOptions().position(member4)
                 .icon(BitmapDescriptorFactory
-                        .defaultMarker(BitmapDescriptorFactory.HUE_GREEN)).title("Park4 here"));
+                        .defaultMarker(BitmapDescriptorFactory.HUE_GREEN)).title("Member4 here"));
 
-        mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(mylocation,15),5000,null);
-//        mMap.animateCamera(CameraUpdateFactory.newLatLngZoom());
+        mMap.moveCamera(CameraUpdateFactory.newLatLng(mylocation));
     }
 }
