@@ -3,6 +3,7 @@ package com.shristi.smart_parking;
 public class UserData {
     private String name,veh,duration;
     private int phn;
+    private String slot;
     public UserData() {
 
     }
@@ -40,4 +41,11 @@ public class UserData {
     }
 
 
+    public String getSlot() {
+        return slot;
+    }
+
+    public void setSlot(String slot) {
+        this.slot = slot;
+    }
 }
