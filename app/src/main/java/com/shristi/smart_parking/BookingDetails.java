@@ -34,7 +34,7 @@ public class BookingDetails extends AppCompatActivity {
         veh=findViewById(R.id.veh);
         phn=findViewById(R.id.phn);
         duration=findViewById(R.id.duration);
-        slot=findViewById(R.id.slot_no);
+       // slot=findViewById(R.id.slot_no);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -48,7 +48,7 @@ public class BookingDetails extends AppCompatActivity {
         data.setVeh(veh.getText().toString());
         data.setPhn(Integer.parseInt(phn.getText().toString()));
         data.setDuration(duration.getText().toString());
-        data.setSlot(slot.getText().toString());
+        //data.setSlot(slot.getText().toString());
         db.collection("User").document().set(data).addOnSuccessListener(new OnSuccessListener<Void>() {
             @Override
             public void onSuccess(Void aVoid) {

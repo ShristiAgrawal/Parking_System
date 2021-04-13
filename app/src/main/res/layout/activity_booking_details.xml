@@ -45,14 +45,14 @@
             android:layout_marginTop="15dp"
             android:paddingLeft="10dp"
             />
-        <EditText
-            android:layout_width="300dp"
-            android:layout_height="50dp"
-            android:hint="Slot number"
-            android:id="@+id/slot_no"
-            android:layout_marginTop="15dp"
-            android:paddingLeft="10dp"
-            />
+<!--        <EditText-->
+<!--            android:layout_width="300dp"-->
+<!--            android:layout_height="50dp"-->
+<!--            android:hint="Slot number"-->
+<!--            android:id="@+id/slot_no"-->
+<!--            android:layout_marginTop="15dp"-->
+<!--            android:paddingLeft="10dp"-->
+<!--            />-->
 
         <Button
             android:layout_width="250dp"
